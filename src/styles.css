@@ -1,0 +1,179 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    color:white;
+}
+
+button:hover{
+    cursor: pointer;
+}
+#root{
+    position: absolute;
+    height:100vh;
+    width: 100vw;
+    background:#855AFD;
+    display: flex;
+    justify-content: center;
+}
+.container{
+    position: absolute;
+    top:80px;
+    height:50%;
+    width: 450px;
+    background:#1C1944;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto;
+}
+  .container::-webkit-scrollbar {
+    width: 12px;
+    height: 10px;
+  }
+  
+  .container::-webkit-scrollbar-thumb {
+    background-color: white;
+  }
+  
+  .container::-webkit-scrollbar-track {
+    background-color: #1C1944;
+  }
+.container .logo{
+    position: absolute;
+    width:80%;
+    height: 40px;
+    background: transparent;
+    text-align: center;
+    top:20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+}
+
+/* ------------------------------------------ input Form ---------------------------------- */
+
+.inputForm{
+    position: absolute;
+    top:65px;
+    height: 35px;
+    width:90%;
+}
+.inputForm.editing{
+    top:-1000px;
+}
+.inputForm input{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border:2px solid #5650A0;
+    outline:none;
+    background: transparent;
+    padding-left: 20px;
+    font-size: 1rem;
+}
+.inputForm button{
+    position: absolute;
+    height: 100%;
+    width: 20%;
+    background: #8759FD;
+    right: 0;
+    font-size: 1rem;
+}
+.inputForm button:hover{
+    background: white;
+    color:#8759FD;
+    font-weight: 700;
+}
+
+/* ------------------------------------------ edit Form ---------------------------------- */
+
+.editForm{
+    position: absolute;
+    top:-1000px;
+    height: 35px;
+    width:90%;
+}
+.editForm.editing{
+    top:65px;
+}
+.editForm input{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: #855AFD;
+    border:2px solid #5650A0;
+    outline:none;
+    background: transparent;
+    padding-left: 20px;
+    font-size: 1rem;
+}
+.editForm button{
+    position: absolute;
+    height: 100%;
+    width: 20%;
+    background: #8759FD;
+    right: 0;
+    font-size: 1rem;
+}
+.editForm button:hover{
+    background: white;
+    color:#8759FD;
+    font-weight: 700;
+}
+
+/* ------------------------------------------ List ---------------------------------- */
+
+.list{
+    position: absolute;
+    top:105px;
+    height:40px;
+    width: 90%;
+    list-style: none;
+}
+
+.list li{
+    background:#855AFD;
+    margin-bottom: 2px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    border-radius: 5px;
+}
+.list .editing{
+    border:2px solid white;
+}
+.list li div{
+    padding-left: 20px;
+}
+
+.list li div.complete{
+    text-decoration: line-through;
+    color:black;
+}
+
+.list li .edit, .list li .delete{
+    position: absolute;
+    right:40px;
+    height: 40px;
+    width: 40px;
+    background: transparent;
+    font-size: 1.3rem;
+}
+.list li .delete{
+    right: 0;
+}
+
+.list li .delete :hover{
+    color: red;
+}
+
+.list li .edit :hover{
+    color: lightskyblue;
+}
+
+
